@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Даня &amp; Даша — 10 октября 2026</title>
+<meta name="description" content="Приглашение на свадьбу Дани и Даши. 10 октября 2026, Москва.">
+<meta name="theme-color" content="#0f1f17">
+<meta property="og:title" content="Даня &amp; Даша — 10.10.2026">
+<meta property="og:description" content="Приглашение на нашу свадьбу">
+<!-- Для красивой превью-картинки в мессенджерах положите рядом photo-1.jpg и раскомментируйте: -->
+<!-- <meta property="og:image" content="photo-1.jpg"> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&family=Forum&family=Kurale&family=Philosopher&family=Yeseva+One&family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
+
+<style>
+
+@font-face{
+  font-family:"Coolvetica";
+  src:url("fonts/Coolvetica.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+  :root{
+    --ink:#0d0b08;
+    --forest:#1c3527;
+    --forest-deep:#0f1f17;
+    --amber:#e8832a;
+    --amber-soft:#f4b872;
+    --parchment:#eadcc0;
+    --parchment-dark:#d9c6a0;
+    --brown:#6b4a2e;
+    --text-dark:#2a1f14;
+    --simba:#c9742a;           /* цвет Симбы — поменяйте на свой */
+--display:"Forum",Georgia,serif;
+--body:"Coolvetica","Helvetica Neue",Arial,sans-serif;
+    --hand:"Marck Script","Segoe Script",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink);
+    color:var(--parchment);
+    font-family:var(--body);
+    font-size:clamp(1rem,.95rem + .4vw,1.2rem);
+font-synthesis:none;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;min-height:100svh;min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:4rem 1.25rem 12rem;overflow:hidden;isolation:isolate;
+  }
+  .hero__inner{position:relative;z-index:3;animation:rise 1.6s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+  .hero__lead{
+    font-family:var(--hand);font-size:clamp(1.3rem,4.5vw,1.9rem);
+    color:var(--amber-soft);margin-bottom:1rem;
+  }
+  .names{
+    font-size:clamp(3.6rem,17vw,9rem);
+    letter-spacing:.01em;
+    color:var(--parchment);
+    text-shadow:0 0 30px rgba(232,131,42,.35);
+  }
+  .names span{display:block}
+  .names .amp{
+    font-size:.55em;color:var(--amber);margin:.05em 0;
+    text-shadow:0 0 24px rgba(232,131,42,.7);
+  }
+  .hero__date{
+    margin-top:1.4rem;font-family:var(--display);
+    font-size:clamp(1.5rem,5vw,2.3rem);letter-spacing:.12em;
+  }
+  .hero__place{margin-top:.3rem;font-style:italic;color:var(--amber-soft)}
+
+  /* Вариант 1: лес и свечи */
+  .hero--forest{
+    background:
+      radial-gradient(1.5px 1.5px at 12% 14%,#fff8 50%,transparent),
+      radial-gradient(1px 1px at 28% 8%,#fff8 50%,transparent),
+      radial-gradient(1.5px 1.5px at 44% 18%,#fff9 50%,transparent),
+      radial-gradient(1px 1px at 63% 10%,#fff8 50%,transparent),
+      radial-gradient(1.5px 1.5px at 78% 20%,#fff8 50%,transparent),
+      radial-gradient(1px 1px at 90% 7%,#fff9 50%,transparent),
+      radial-gradient(1px 1px at 8% 34%,#fff6 50%,transparent),
+      radial-gradient(1px 1px at 92% 36%,#fff6 50%,transparent),
+      linear-gradient(#070d09 0%,#102319 55%,#1c3527 100%);
+  }
+  .trees{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:1;pointer-events:none}
+  .trees--far{opacity:.55;height:52%}
+  .glow{
+    position:absolute;left:50%;bottom:-10%;width:140%;height:60%;transform:translateX(-50%);
+    background:radial-gradient(ellipse at center,rgba(232,131,42,.28),transparent 65%);
+    z-index:1;animation:glow 4s ease-in-out infinite;pointer-events:none
+  }
+  @keyframes glow{0%,100%{opacity:.8}50%{opacity:1}}
+
+  .candles{
+    position:absolute;left:0;right:0;bottom:1.2rem;z-index:2;
+    display:flex;justify-content:center;align-items:flex-end;gap:clamp(.6rem,3vw,1.6rem);
+    padding:0 1rem;
+  }
+  .candle{position:relative;width:clamp(16px,3.6vw,26px);display:flex;flex-direction:column;align-items:center}
+  .candle__wax{
+    width:100%;border-radius:3px 3px 1px 1px;
+    background:linear-gradient(90deg,#c9b48c,#efe2c4 45%,#bfa87c);
+    box-shadow:0 0 18px rgba(232,131,42,.18);
+  }
+  .candle__wick{width:2px;height:7px;background:#2a1f14}
+  .flame{
+    width:11px;height:20px;margin-bottom:-1px;
+    background:radial-gradient(ellipse at 50% 75%,#fff6d0 0%,#ffcf6a 35%,#e8832a 70%,rgba(232,131,42,0) 100%);
+    border-radius:50% 50% 50% 50% / 62% 62% 38% 38%;
+    transform-origin:50% 100%;
+    filter:drop-shadow(0 0 8px rgba(255,170,60,.9)) drop-shadow(0 0 22px rgba(232,131,42,.55));
+    animation:flicker 2.4s ease-in-out infinite;
+  }
+  @keyframes flicker{
+    0%,100%{transform:scale(1,1) rotate(0)}
+    18%{transform:scale(.92,1.08) rotate(-2deg)}
+    34%{transform:scale(1.05,.94) rotate(1.5deg)}
+    52%{transform:scale(.95,1.1) rotate(-1deg)}
+    71%{transform:scale(1.04,.97) rotate(2deg)}
+    86%{transform:scale(.97,1.05) rotate(-1.5deg)}
+  }
+  .candle:nth-child(1) .flame{animation-delay:-.4s;animation-duration:2.1s}
+  .candle:nth-child(2) .flame{animation-delay:-1.1s;animation-duration:2.7s}
+  .candle:nth-child(3) .flame{animation-delay:-.2s;animation-duration:2.3s}
+  .candle:nth-child(4) .flame{animation-delay:-1.7s;animation-duration:2.9s}
+  .candle:nth-child(5) .flame{animation-delay:-.8s;animation-duration:2.2s}
+  .candle:nth-child(6) .flame{animation-delay:-1.4s;animation-duration:2.6s}
+  .candle:nth-child(7) .flame{animation-delay:-.6s;animation-duration:2.4s}
+
+  /* Вариант 2: фото пары */
+  .hero--photo{
+    background:
+      linear-gradient(180deg,rgba(13,11,8,.55) 0%,rgba(15,31,23,.35) 40%,rgba(13,11,8,.88) 100%),
+      url("photo-hero.jpg") center/cover no-repeat,
+      linear-gradient(#16291d,#0d0b08);
+  }
+  .hero--photo .candles{bottom:1.6rem}
+  .hero--photo .candle:nth-child(n+4){display:none}
+
+  /* показываем нужный вариант */
+  body[data-hero="forest"] .hero--photo{display:none}
+  body[data-hero="photo"] .hero--forest{display:none}
+
+  /* переключатель для просмотра вариантов: открыть сайт с ?preview */
+  .switcher{
+    position:fixed;top:.75rem;left:50%;transform:translateX(-50%);z-index:50;
+    display:none;gap:.25rem;padding:.25rem;border-radius:999px;
+    background:rgba(13,11,8,.85);border:1px solid var(--brown);
+    font-family:var(--body);
+  }
+  body.is-preview .switcher{display:flex}
+  .switcher button{
+    border:0;background:transparent;color:var(--parchment);font:inherit;font-size:.95rem;
+    padding:.4rem .9rem;border-radius:999px;cursor:pointer;
+  }
+  .switcher button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
+
+  /* ============ ОБЩЕЕ ДЛЯ СЕКЦИЙ ============ */
+  section{padding:clamp(3.5rem,9vw,6rem) 1.25rem;position:relative}
+  .wrap{max-width:46rem;margin:0 auto}
+  .wrap--wide{max-width:64rem}
+  .title{
+    font-size:clamp(2rem,7vw,3.2rem);text-align:center;margin-bottom:.5rem;
+  }
+  .sub{text-align:center;font-style:italic;opacity:.85;margin-bottom:2.2rem}
+
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:.9rem;
+    color:var(--amber);margin:0 auto 1.4rem;max-width:18rem;
+  }
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,currentColor)}
+  .divider::after{transform:scaleX(-1)}
+  .divider svg{width:26px;height:26px;flex:none}
+
+  .band--forest{background:var(--forest-deep)}
+  .band--parchment{background:var(--parchment);color:var(--text-dark)}
+  .band--parchment .sub{opacity:.75}
+  .band--parchment .divider{color:var(--brown)}
+
+  /* ============ ДАТА ============ */
+  .when{text-align:center}
+  .when__day{font-family:var(--display);font-size:clamp(3rem,13vw,6rem);line-height:1;color:var(--amber-soft)}
+  .when__month{font-family:var(--display);font-size:clamp(1.6rem,6vw,2.6rem);margin-top:.4rem}
+  .when__meta{margin-top:1rem;font-size:1.15em}
+  .btn{
+    display:inline-block;margin-top:2rem;padding:.9rem 1.8rem;
+    border:1px solid var(--amber);border-radius:2px;
+    color:var(--parchment);text-decoration:none;font-family:var(--display);
+    font-size:1.15rem;letter-spacing:.04em;
+    background:rgba(232,131,42,.08);
+    transition:background .25s,color .25s;
+  }
+  .btn:hover{background:var(--amber);color:var(--ink)}
+
+  /* ============ МЕСТА ============ */
+  .places{display:grid;gap:1.5rem}
+  @media(min-width:760px){.places{grid-template-columns:1fr 1fr}}
+  .place{
+    position:relative;padding:2rem 1.5rem;text-align:center;
+    background:var(--forest-deep);color:var(--parchment);
+    outline:1px solid var(--brown);outline-offset:-10px;
+  }
+  .place h3{font-size:1.9rem;color:var(--amber-soft);margin-bottom:.6rem}
+  .place address{font-style:normal;font-size:1.2em}
+  .place small{display:block;margin-top:.5rem;opacity:.75;font-style:italic}
+
+  /* ============ ПРОГРАММА ============ */
+  .timeline{list-style:none;position:relative;margin:0 auto;max-width:34rem;padding-left:0}
+  .timeline::before{
+    content:"";position:absolute;left:5.25rem;top:.4rem;bottom:.4rem;width:1px;
+    background:linear-gradient(var(--amber),var(--brown));
+  }
+  .timeline li{
+    display:grid;grid-template-columns:4rem 1fr;gap:2rem;align-items:baseline;
+    padding:.7rem 0;position:relative;
+  }
+  .timeline li::after{
+    content:"";position:absolute;left:5.25rem;top:1.15rem;width:9px;height:9px;margin-left:-4px;
+    border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);
+  }
+  .timeline time{font-family:var(--display);font-size:1.3rem;color:var(--amber-soft);text-align:right}
+  .timeline span{padding-left:.4rem}
+
+/* ============ КАРТА ============ */
+.map{
+  position:relative;max-width:40rem;margin:0 auto;
+  aspect-ratio:600/520;
+  border:1px solid var(--brown);background:#12241a;overflow:hidden;
+}
+.map > svg,.map > img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.map > img{object-fit:cover}
+.map-note{text-align:center;font-style:italic;opacity:.7;margin-top:.8rem;font-size:.95em}
+
+.route{stroke-dasharray:3 12;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:30}}
+
+.map__travel{
+  position:absolute;top:.6rem;right:.6rem;z-index:2;
+  display:flex;flex-direction:column;gap:.45rem;
+  list-style:none;padding:.6rem .8rem;
+  background:rgba(13,11,8,.8);border:1px solid var(--brown);
+  color:var(--parchment);font-size:clamp(.9rem,2.6vw,1.05rem);line-height:1;
+}
+.map__travel li{display:flex;align-items:center;gap:.55rem}
+.map__travel svg{width:22px;height:22px;flex:none;color:var(--amber-soft)}
+
+/* ============ ДРЕСС-КОД ============ */
+.palette{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(1.6rem,5vw,2.4rem) clamp(1.4rem,4vw,2.2rem);
+  max-width:34rem;margin:0 auto;padding:.8rem 0;list-style:none;
+}
+.swatch{
+  --s:clamp(68px,19vw,96px);
+  position:relative;width:var(--s);height:var(--s);
+}
+/* сам цветной кружок с рваным краем */
+.swatch__dot{
+  position:absolute;inset:0;border-radius:50%;
+  background:var(--c);
+}
+.swatch:nth-child(3n+1) .swatch__dot{filter:url(#torn-a)}
+.swatch:nth-child(3n+2) .swatch__dot{filter:url(#torn-b)}
+.swatch:nth-child(3n)   .swatch__dot{filter:url(#torn-c)}
+/* пунктирная обводка вокруг */
+.swatch::after{
+  content:"";position:absolute;inset:-9px;
+  border:1.5px dashed var(--parchment);opacity:.75;
+  border-radius:48% 52% 50% 50% / 52% 48% 52% 48%;
+}
+.swatch:nth-child(even)::after{transform:rotate(14deg)}
+.swatch:nth-child(3n)::after{transform:rotate(-9deg)}
+
+  /* ============ ФОТО (карусель) ============ */
+.carousel{position:relative;max-width:30rem;margin:0 auto}
+@media(min-width:760px){.carousel{max-width:46rem}}
+.carousel__track{
+  display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  border:1px solid var(--brown);
+}
+.carousel__track::-webkit-scrollbar{display:none}
+.slide{
+  flex:0 0 100%;scroll-snap-align:center;position:relative;
+  aspect-ratio:4/5;display:grid;place-items:center;
+  background:linear-gradient(160deg,#1c3527,#0d0b08);color:var(--parchment);
+}
+@media(min-width:760px){.slide{aspect-ratio:3/2}}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide span{font-style:italic;opacity:.55}
+
+.carousel__btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:2.8rem;height:2.8rem;border-radius:50%;
+  border:1px solid var(--amber-soft);background:rgba(13,11,8,.6);
+  color:var(--parchment);cursor:pointer;display:grid;place-items:center;
+  transition:background .25s,color .25s;
+}
+.carousel__btn:hover{background:var(--amber);color:var(--ink)}
+.carousel__btn svg{width:20px;height:20px}
+.carousel__btn--prev{left:.6rem}
+.carousel__btn--next{right:.6rem}
+
+.carousel__dots{display:flex;justify-content:center;gap:.7rem;margin-top:1.1rem}
+.carousel__dots button{
+  width:11px;height:11px;padding:0;border-radius:50%;cursor:pointer;
+  border:1px solid var(--brown);background:transparent;
+}
+.carousel__dots button[aria-current="true"]{background:var(--amber);border-color:var(--amber)}
+
+  /* ============ ФИНАЛ ============ */
+  footer{
+    text-align:center;padding:4rem 1.25rem 9rem;
+    background:linear-gradient(var(--forest-deep),var(--ink));
+  }
+  footer p{font-family:var(--hand);font-size:clamp(1.6rem,6vw,2.4rem);color:var(--amber-soft)}
+  footer .gift{font-family:var(--body); font-size:clamp(1.05rem,1rem + .4vw,1.25rem); color:var(--parchment);max-width:45rem;margin:0 auto 2.8rem;
+  line-height:1.55;
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--brown);}
+  footer small{display:block;margin-top:1rem;opacity:.6;font-style:italic}
+
+  /* ============ СИМБА ============ */
+  .simba{
+    position:fixed;right:max(.75rem,env(safe-area-inset-right));bottom:max(.75rem,env(safe-area-inset-bottom));
+    z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;
+  }
+  .simba__cat{
+  width:clamp(84px,22vw,120px);
+  border:0;background:none;padding:0;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .2s;
+  animation:simba-bob 3.6s ease-in-out infinite;
+}
+.simba__cat img{
+  display:block;width:100%;height:auto;
+  /* мультяшная «наклейка»: белая обводка и мягкая тень */
+  filter:
+    drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff)
+    drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)
+    drop-shadow(0 6px 10px rgba(0,0,0,.55));
+}
+.simba__cat:hover{transform:rotate(-4deg) scale(1.05)}
+.simba__cat:active{transform:scale(.92)}
+@keyframes simba-bob{0%,100%{translate:0 0}50%{translate:0 -4px}}
+  .simba__bubble{
+    max-width:min(17rem,calc(100vw - 2rem));
+    background:var(--parchment);color:var(--text-dark);
+    padding:.85rem 1rem;border-radius:14px 14px 4px 14px;
+    font-size:1.05rem;line-height:1.35;
+    box-shadow:0 8px 24px rgba(0,0,0,.5);
+    opacity:0;transform:translateY(8px) scale(.96);transform-origin:bottom right;
+    pointer-events:none;transition:opacity .25s,transform .25s;
+  }
+  .simba__bubble.is-open{opacity:1;transform:none;pointer-events:auto}
+  .simba__bubble b{display:block;font-family:var(--hand);font-weight:400;font-size:1.25rem;color:var(--brown)}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
+</style>
+</head>
+
+<body data-hero="forest">
+
+<!-- Переключатель вариантов первого экрана. Виден только если открыть сайт с ?preview -->
+<div class="switcher" role="group" aria-label="Вариант первого экрана">
+  <button type="button" data-set="forest" aria-pressed="true">Лес и свечи</button>
+  <button type="button" data-set="photo" aria-pressed="false">Фото пары</button>
+</div>
+
+<!-- ======= ПЕРВЫЙ ЭКРАН · ВАРИАНТ 1: ЛЕС И СВЕЧИ ======= -->
+<header class="hero hero--forest" id="top">
+  <div class="glow"></div>
+
+  <!-- дальний ряд елей -->
+  <svg class="trees trees--far" viewBox="0 0 800 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g fill="#0b1a12">
+      <path d="M0 300V210l30-70 20 40 35-100 40 90 25-45 40 110 30-60 45 120 35-80 50 130 40-90 45 110 30-60 40 90 35-120 45 100 30-50 40 120 35-70 40 110V300z"/>
+    </g>
+  </svg>
+  <!-- ближний ряд елей -->
+  <svg class="trees" viewBox="0 0 800 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g fill="#060d09">
+      <path d="M0 300V190l25-55 18 30 30-85 30 70 22-40 34 100 24-50 40 110 28-70 38 100 30-90 42 120 26-60 38 100 30-80 36 110 28-60 36 90 26-100 34 90 24-40 30 90V300z"/>
+    </g>
+  </svg>
+
+  <div class="hero__inner">
+    <p class="hero__lead">Приглашаем разделить этот особенный день с нами</p>
+    <h1 class="names"><span>Даня</span><span class="amp">&amp;</span><span>Даша</span></h1>
+    <p class="hero__date">10 · 10 · 2026</p>
+    <p class="hero__place">Москва</p>
+  </div>
+
+  <div class="candles" aria-hidden="true">
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:46px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:78px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:58px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:98px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:64px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:84px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:50px"></div></div>
+  </div>
+</header>
+
+<!-- ======= ПЕРВЫЙ ЭКРАН · ВАРИАНТ 2: ФОТО ПАРЫ (файл photo-hero.jpg) ======= -->
+<header class="hero hero--photo">
+  <div class="hero__inner">
+    <p class="hero__lead">Приглашаем разделить этот особенный день с нами</p>
+    <h1 class="names"><span>Даня</span><span class="amp">&amp;</span><span>Даша</span></h1>
+    <p class="hero__date">10 · 10 · 2026</p>
+    <p class="hero__place">Москва</p>
+  </div>
+  <div class="candles" aria-hidden="true">
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:46px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:78px"></div></div>
+    <div class="candle"><div class="flame"></div><div class="candle__wick"></div><div class="candle__wax" style="height:58px"></div></div>
+  </div>
+</header>
+
+<!-- ======= КОГДА ======= -->
+<section class="band--forest" id="when">
+  <div class="wrap when">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z"/><path d="M12 22v-5"/></svg>
+    </div>
+    <h2 class="title">КОГДА</h2>
+    <p class="sub">Сову не пришлем, но дату лучше запомнить</p>
+
+    <div class="when__day">10 ОКТЯБРЯ 2026 </div>
+
+	<p class="when__meta">СУББОТА</p>
+    <p class="when__meta">Начинаем в 15:15<br>Заканчиваем в 21:45</p>
+
+    <a class="btn" id="gcal" href="#" target="_blank" rel="noopener">Добавить в Google Календарь</a>
+  </div>
+</section>
+
+<!-- ======= МЕСТА ======= -->
+<section class="band--parchment" id="places">
+  <div class="wrap wrap--wide">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    </div>
+    <h2 class="title">Две точки на карте</h2>
+    <p class="sub">Дорога ведёт сначала к одному порогу, потом к другому</p>
+
+    <div class="places">
+      <article class="place">
+        <h3>Церемония</h3>
+        <address>Малая Ордынка, 14</address>
+      </article>
+      <article class="place">
+        <h3>Банкет</h3>
+        <address>Столешников переулок, 6 строение 3</address>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ПРОГРАММА ======= -->
+<section class="band--forest" id="program">
+  <div class="wrap">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg>
+    </div>
+    <h2 class="title">Наш день</h2>
+    <p class="sub">Так пройдёт наш день</p>
+
+    <ol class="timeline">
+	<li><time>15:15</time><span>Сбор гостей у ЗАГСа</span></li>
+	<li><time>15:30</time><span>Церемония</span></li>
+      <li><time>17:00</time><span>Welcome</span></li>
+      <li><time>17:40</time><span>Ужин и тосты</span></li>
+      <li><time>19:00</time><span>Игры от гостей</span></li>
+      <li><time>20:30</time><span>Караоке</span></li>
+      <li><time>21:45</time><span>Завершение вечера</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======= КАРТА ======= -->
+<section class="band--parchment" id="map">
+  <div class="wrap wrap--wide">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M15.500 8.500l-2 5-5 2 2-5z"/></svg>
+    </div>
+    <h2 class="title">ЛОКАЦИИ</h2>
+    <p class="sub"></p>
+
+<div class="map" id="mapBox">
+  <svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" role="img"
+       aria-label="Схема: банкет в Столешниковом переулке, церемония на Малой Ордынке" id="mapSvg">
+    <defs>
+      <pattern id="paper" width="6" height="6" patternUnits="userSpaceOnUse">
+        <rect width="6" height="6" fill="#12241a"/><circle cx="1" cy="1" r=".5" fill="#1b3626"/>
+      </pattern>
+    </defs>
+    <rect width="600" height="520" fill="url(#paper)"/>
+
+    <!-- парки -->
+    <ellipse cx="470" cy="190" rx="70" ry="42" fill="#1b3a28"/>
+    <ellipse cx="110" cy="400" rx="75" ry="45" fill="#1b3a28"/>
+
+    <!-- улицы -->
+ <g stroke="#3a2d1f" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9">
+  <path d="M40 110 L250 100 L420 120"/>
+  <path d="M60 250 L230 240 L360 225"/>
+  <path d="M230 40 L240 240"/>
+  <path d="M120 505 L330 495 L560 500"/>
+  <path d="M520 300 L545 480"/>
+</g>
+
+    <!-- река -->
+    <path d="M-20 330 C 100 360, 200 250, 310 285 S 500 300, 640 250" fill="none" stroke="#2c5a5c" stroke-width="28" stroke-linecap="round"/>
+    <path d="M-20 330 C 100 360, 200 250, 310 285 S 500 300, 640 250" fill="none" stroke="#3f7b7d" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+
+    <!-- мост -->
+    <g transform="translate(304 282) rotate(-20)">
+      <rect x="-8" y="-24" width="16" height="48" fill="#4a3a28" stroke="#a98a62" stroke-width="1.5"/>
+    </g>
+
+    <!-- деревья -->
+    <g fill="#244a33">
+      <path d="M470 205 l9 -22 9 22z M495 200 l8 -19 8 19z M448 198 l8 -19 8 19z"/>
+      <path d="M95 415 l9 -22 9 22z M122 410 l8 -19 8 19z M70 408 l8 -19 8 19z"/>
+    </g>
+
+   <!-- маршрут -->
+<path class="route" d="M172 192 C 230 200, 250 262, 302 282 S 380 330, 420 380"
+      fill="none" stroke="#e8832a" stroke-width="4" stroke-linecap="round"/>
+
+<!-- банкет: подписи над меткой -->
+<g transform="translate(150 200)">
+  <circle r="30" fill="#e8832a" opacity=".16"/>
+  <path d="M0 -26 C 12 -26 18 -17 18 -9 C 18 4 0 20 0 20 C 0 20 -18 4 -18 -9 C -18 -17 -12 -26 0 -26 Z" fill="#e8832a" stroke="#0d0b08" stroke-width="2"/>
+  <circle cy="-9" r="6" fill="#0d0b08"/>
+  <text y="-66" text-anchor="middle" font-family="Forum,serif" font-size="28" fill="#f4b872" stroke="#12241a" stroke-width="5" paint-order="stroke">Банкет</text>
+  <text y="-40" text-anchor="middle" font-family="Coolvetica,sans-serif" font-size="20" fill="#eadcc0" stroke="#12241a" stroke-width="4" paint-order="stroke">Столешников пер., 6с3</text>
+</g>
+
+<!-- церемония: подписи под меткой -->
+<g transform="translate(440 384)">
+  <circle r="30" fill="#e8832a" opacity=".16"/>
+  <path d="M0 -26 C 12 -26 18 -17 18 -9 C 18 4 0 20 0 20 C 0 20 -18 4 -18 -9 C -18 -17 -12 -26 0 -26 Z" fill="#e8832a" stroke="#0d0b08" stroke-width="2"/>
+  <circle cy="-9" r="6" fill="#0d0b08"/>
+  <text y="50" text-anchor="middle" font-family="Forum,serif" font-size="28" fill="#f4b872" stroke="#12241a" stroke-width="5" paint-order="stroke">Церемония</text>
+  <text y="74" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="20" fill="#eadcc0" stroke="#12241a" stroke-width="4" paint-order="stroke">Малая Ордынка, 14</text>
+</g>
+
+
+  </svg>
+
+  <!-- Если положите рядом map.jpg, он заменит схему -->
+  <img src="map.jpg" alt="Карта: церемония и банкет" hidden
+       onload="this.hidden=false;document.getElementById('mapSvg').style.display='none';document.getElementById('mapNote').hidden=true"
+       onerror="this.remove()">
+
+  <!-- время в пути между точками -->
+  <ul class="map__travel" aria-label="Время в пути между церемонией и банкетом">
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3l2-5h12l2 5v3z"/><path d="M4 12h16"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+      <span>Машина: 12 мин</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="15" rx="2"/><path d="M5 11h14"/><circle cx="8.5" cy="15" r="1"/><circle cx="15.5" cy="15" r="1"/><path d="M7 18v2M17 18v2"/></svg>
+      <span>Транспорт: 30 мин</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4.5" r="1.8"/><path d="M12 7l-1.500 5 3 3v5M10.500 12l-3 1.500M13 9l3 2.500 2-.5M13.500 15l2.500 4"/></svg>
+      <span>Пешком: 40 мин</span>
+    </li>
+  </ul>
+</div>
+  </div>
+</section>
+
+<!-- ======= ДРЕСС-КОД ======= -->
+<section class="band--forest" id="dresscode">
+  <div class="wrap">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 3l4 3 4-3 5 4-3 4-2-1v11H8V10l-2 1-3-4z"/></svg>
+    </div>
+    <h2 class="title">Дресс-код</h2>
+    <p class="sub">Нам будет особенно приятно видеть вас в нарядах цветовой гаммы нашей свадьбы</p>
+
+    <!-- Когда будет картинка с цветами — положите файл dresscode.jpg рядом с index.html -->
+<!-- Рваные края: невидимый SVG-фильтр. Не удаляйте. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="torn-a" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="torn-b" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="torn-c" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="27" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<ul class="palette">
+  <li class="swatch" style="--c:#F2E5D4" title="#F2E5D4"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#7E9663" title="#7E9663"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#84794C" title="#84794C"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#533827" title="#533827"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#7D543A" title="#7D543A"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#5F2729" title="#5F2729"><span class="swatch__dot"></span></li>
+  <li class="swatch" style="--c:#91272B" title="#91272B"><span class="swatch__dot"></span></li>
+</ul>
+  </div>
+</section>
+
+<!-- ======= ФОТО ======= -->
+<section class="band--parchment" id="photos">
+  <div class="wrap wrap--wide">
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-8-5.500-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 5.500-8 11-8 11z"/></svg>
+    </div>
+    <h2 class="title">Волшебные мгновения</h2>
+    <p class="sub">Несколько страниц из нашей истории</p>
+
+    <!-- Положите photo-1.jpg … photo-4.jpg рядом с index.html -->
+<div class="carousel" aria-roledescription="карусель" aria-label="Фотографии Дани и Даши">
+  <div class="carousel__track" id="carTrack" tabindex="0">
+    <figure class="slide"><span>Фото 1</span><img src="photo-1.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="slide"><span>Фото 2</span><img src="photo-2.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="slide"><span>Фото 3</span><img src="photo-3.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="slide"><span>Фото 4</span><img src="photo-4.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+	<figure class="slide"><span>Фото 5</span><img src="photo-5.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+	<figure class="slide"><span>Фото 6</span><img src="photo-6.png" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+	<figure class="slide"><span>Фото 7</span><img src="photo-7.jpg" alt="Даня и Даша" loading="lazy" onerror="this.remove()"></figure>
+
+  </div>
+
+  <button class="carousel__btn carousel__btn--prev" id="carPrev" type="button" aria-label="Предыдущее фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="carousel__btn carousel__btn--next" id="carNext" type="button" aria-label="Следующее фото">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+
+  <div class="carousel__dots" id="carDots"></div>
+</div>
+  </div>
+</section>
+
+<footer>
+<p class="gift">Не беспокойтесь о выборе подарков и не везите цветов: мы будем рады подарку в конверте, он поможет нам поехать в свадебное путешествие</p>
+  <p>До встречи 10 октября</p>
+  <small>Подтверждение не просим, просто с нетерпением ждем вас</small>
+</footer>
+
+<!-- ======= СИМБА (пасхалка) ======= -->
+<div class="simba">
+  <div class="simba__bubble" id="simbaBubble" role="status" aria-live="polite"></div>
+  <button class="simba__cat" id="simbaCat" type="button" aria-label="Погладить Симбу">
+    <img src="simba.png" alt="Симба">
+  </button>
+</div>
+
+<script>
+  /* ================= НАСТРОЙКИ ================= */
+
+  // Фразы Симбы: добавляйте свои, по одной на строку
+  const SIMBA_LINES = [
+    "Мяу. Это Симба. Я проверил — торт будет. Приходите.",
+    "Я главный по уюту. Остальные вопросы — к Дане и Даше.",
+    "Если увидите на столе что-то вкусное — это для гостей. Для меня тоже. Но в основном для гостей.",
+    "Мурр. Я бы пришёл, но кто-то должен охранять дом.",
+    "Тсс. Я знаю секрет: они очень вас ждут."
+  ];
+
+  // Данные события для Google Календаря (время московское)
+  const EVENT = {
+    title: "Свадьба Дани и Даши",
+    start: "20261010T170000",
+    end:   "20261010T214500",
+    timezone: "Europe/Moscow",
+    location: "Малая Ордынка, 14, Москва",
+    details: ["Церемония: Малая Ордынка, 14. Начало в 15:30.",
+	          "Банкет: Столешников переулок, 6с3. Начало в 17:00."
+			  ].join("\n"),
+  };
+
+  const AUTOPLAY_MS = 5000;   // пауза между фото в мс; 0 — выключить автопролистывание
+
+  /* ================= КОД ================= */
+
+  const $ = id => document.getElementById(id);
+  function safe(name, fn){
+    try { fn(); } catch (e) { console.error("Ошибка в блоке «" + name + "»:", e); }
+  }
+
+  // Google Календарь
+  safe("календарь", () => {
+    const a = $("gcal");
+    if (!a) return;
+    const p = new URLSearchParams({
+      action: "TEMPLATE",
+      text: EVENT.title,
+      dates: EVENT.start + "/" + EVENT.end,
+      ctz: EVENT.timezone,
+      location: EVENT.location,
+      details: EVENT.details
+    });
+    a.href = "https://calendar.google.com/calendar/render?" + p.toString();
+  });
+
+  // Первый экран: ?hero=photo или ?hero=forest; для сравнения откройте сайт с ?preview
+  safe("первый экран", () => {
+    const q = new URLSearchParams(location.search);
+    const body = document.body;
+    const setHero = v => {
+      body.dataset.hero = v;
+      document.querySelectorAll(".switcher button").forEach(b =>
+        b.setAttribute("aria-pressed", b.dataset.set === v ? "true" : "false"));
+    };
+    if (q.has("preview")) body.classList.add("is-preview");
+    setHero(q.get("hero") === "photo" ? "photo" : "forest");
+    document.querySelectorAll(".switcher button").forEach(b =>
+      b.addEventListener("click", () => { setHero(b.dataset.set); window.scrollTo(0, 0); }));
+  });
+
+  // Симба
+  safe("Симба", () => {
+    const cat = $("simbaCat");
+    const bubble = $("simbaBubble");
+    if (!cat || !bubble) return;
+    let i = -1, timer;
+    cat.addEventListener("click", () => {
+      i = (i + 1) % SIMBA_LINES.length;
+      bubble.innerHTML = "<b>Симба</b>" + SIMBA_LINES[i];
+      bubble.classList.add("is-open");
+      clearTimeout(timer);
+      timer = setTimeout(() => bubble.classList.remove("is-open"), 6000);
+    });
+    document.addEventListener("click", e => {
+      if (!e.target.closest(".simba")) bubble.classList.remove("is-open");
+    });
+  });
+
+  // Карусель
+  safe("карусель", () => {
+    const track = $("carTrack");
+    const dotsBox = $("carDots");
+    if (!track || !dotsBox) return;
+    const slides = [...track.children];
+    let idx = 0, timer, ticking = false;
+
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Фото " + (i + 1));
+      b.addEventListener("click", () => { go(i); restart(); });
+      dotsBox.appendChild(b);
+      return b;
+    });
+
+    function go(i){
+      idx = (i + slides.length) % slides.length;
+      track.scrollTo({ left: idx * track.clientWidth, behavior: "smooth" });
+    }
+    function sync(){
+      idx = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach((d, k) => d.setAttribute("aria-current", k === idx ? "true" : "false"));
+    }
+    track.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { sync(); ticking = false; });
+    });
+
+    const prev = $("carPrev"), next = $("carNext");
+    if (prev) prev.addEventListener("click", () => { go(idx - 1); restart(); });
+    if (next) next.addEventListener("click", () => { go(idx + 1); restart(); });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function start(){ if (AUTOPLAY_MS && !reduce) timer = setInterval(() => go(idx + 1), AUTOPLAY_MS); }
+    function stop(){ clearInterval(timer); }
+    function restart(){ stop(); start(); }
+
+    ["pointerdown", "mouseenter", "focusin"].forEach(e => track.addEventListener(e, stop));
+    ["pointerup", "mouseleave", "focusout"].forEach(e => track.addEventListener(e, restart));
+    new IntersectionObserver(([en]) => en.isIntersecting ? restart() : stop()).observe(track);
+
+    sync();
+  });
+</script>
+</body>
+</html>
