@@ -11,7 +11,7 @@
 <!-- Для красивой превью-картинки в мессенджерах положите рядом photo-1.jpg и раскомментируйте: -->
 <!-- <meta property="og:image" content="photo-1.jpg"> -->
 
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&family=Forum&family=Kurale&family=Philosopher&family=Yeseva+One&family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap&subset=cyrillic" rel="stylesheet">
 
 <style>
 
@@ -31,9 +31,9 @@
     --brown:#6b4a2e;
     --text-dark:#2a1f14;
     --simba:#c9742a;           /* цвет Симбы — поменяйте на свой */
---display:"Forum",Georgia,serif;
---body:"Coolvetica","Helvetica Neue",Arial,sans-serif;
-    --hand:"Marck Script","Segoe Script",cursive;
+    --display:"Forum",Georgia,serif;
+	--body:"Coolvetica","Helvetica Neue",Arial,sans-serif;
+    --hand:var(--display);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -370,6 +370,16 @@ font-synthesis:none;
     html{scroll-behavior:auto}
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   }
+
+	/* единые шрифты: заголовочный и основной */
+.hero__lead{font-size:clamp(1.1rem,4vw,1.5rem);letter-spacing:.06em}
+footer p:not(.gift){font-size:clamp(1.6rem,5.5vw,2.4rem);letter-spacing:.04em}
+.simba__bubble b{font-size:1.1rem}
+
+/* подписи на карте: шрифты задаются здесь, а не в самой схеме */
+#mapSvg text{font-family:var(--body)}
+#mapSvg text[font-size="28"],
+#mapSvg text[font-size="16"]{font-family:var(--display)}
 </style>
 </head>
 
